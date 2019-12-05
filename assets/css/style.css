@@ -1,3 +1,5 @@
+
+
 .bg {
 background: url(../images/barrie-marina.jpg);
     background-position: center;
@@ -8,5 +10,24 @@ background: url(../images/barrie-marina.jpg);
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
 
+}
+
+.heading {
+    padding-top: 20px;
+    text-align: center;
+    font-family: Lato;
+    font-size: 24px;
+    color: #fff;
+}
+
+.intro-text {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    font-family: Lato;
+    font-size: 18px;
+    color: #fff;
 }
