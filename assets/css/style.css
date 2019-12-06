@@ -32,4 +32,8 @@ background: url(../images/barrie-marina.jpg);
     color: #fff;
 }
 
+#map {
+    min-height: 360px;
+    
+}
 

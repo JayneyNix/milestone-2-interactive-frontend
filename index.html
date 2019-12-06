@@ -45,9 +45,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 3,
+                center: {lat: 43.252392, lng: -79.082069}
+            });
+        }
+        </script>
+    
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwZqbqPK0ZngADMrkDldkW7Q_CUwKy2w0&callback=initMap">
     </script>
+    
 </body>
 
 </html>
