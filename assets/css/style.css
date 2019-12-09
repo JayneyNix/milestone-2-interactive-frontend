@@ -38,3 +38,11 @@ background: url(../images/barrie-marina.jpg);
 .map-col {
     padding-right: 20px;
 }
+#footer {
+    background-color: #fff;
+}
+.footer-content {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: #66b3ff;
+}
