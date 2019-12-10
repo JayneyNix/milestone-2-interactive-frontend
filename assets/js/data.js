@@ -1,4 +1,4 @@
-var marinas = [
+var marina = [
   {
     "Marina": "Island Grove",
     "Marina Website": "https://www.islandgrovemarina.com/",
