@@ -1,9 +1,9 @@
-var marina = [
+var marinas = [
   {
     "Marina": "Island Grove",
     "Marina Website": "https://www.islandgrovemarina.com/",
-    "Lat": "",
-    "Lng": "",
+    "Lat": "44.302020",
+    "Lng": "-79.472088",
     "Day Launch Fee": "$25",
     "Summer Season Launch Pass": "",
     "Accommodation Available?": "No",
@@ -26,8 +26,8 @@ var marina = [
   {
     "Marina": "Willow Beach Marina",
     "Marina Website": "",
-    "Lat": "",
-    "Lng": "",
+    "Lat": "44.308918",
+    "Lng": "-79.437413",
     "Day Launch Fee": "Season Pass Only",
     "Summer Season Launch Pass": "$200",
     "Accommodation Available?": "No",
