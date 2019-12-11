@@ -52,9 +52,26 @@ background: url(../images/barrie-marina.jpg);
 .full-service {
     font-family: Lato, sans-serif;
     font-size: 18px;
-    color: #fff;
+    background-color: #fff;
+    color: #66b3ff;
+    font-weight: bolder;
     text-align: center;
+    margin-top: 10px;
+    border-style: groove;
+    border-radius: 60%;
+    padding: 10px;
 }
+
+.service-info {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+.far {
+    padding-right: 5px;
+}
+
 
 .map-col {
     padding-right: 20px;
