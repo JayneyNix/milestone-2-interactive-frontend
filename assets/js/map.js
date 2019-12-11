@@ -1,3 +1,5 @@
+// Initialize map and set marker locations and icon
+
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 9,
@@ -65,4 +67,25 @@ var marinas = [
         });
     }
     }
+
+
+// Popup information window when map marker is clicked
+
+var marker = new google.maps.Marker({
+  center: { lat: 44.302020, lng: -79.472088 },
+  map: map,
+  title: marinas[0]
+});
+
+marker.addListener('click', function() {
+  infowindow.open(map, marker);  
+});
+
+var infowindow = new google.maps.Infowindow({
+    content: contentBox 
+    
+});
+
+var contentBox = 'div id="content-box">';
+
 
