@@ -62,11 +62,12 @@ background: url(../images/barrie-marina.jpg);
     padding: 10px;
 }
 
-.service-info {
+.service-question {
     text-align: center;
     font-family: Lato, sans-serif;
     font-size: 18px;
-    color: #fff;
+    color: #66b3ff;
+    font-weight: bolder;
 }
 .far {
     padding-right: 5px;
@@ -78,10 +79,43 @@ background: url(../images/barrie-marina.jpg);
 }
 
 
+/* Full Service Modal */
 
+.modal {
+    display: none;
+    position: relative;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    overflow: auto;
+    background-color: #66b3ff;
+}
 
+.modal-content {
+    position: relative;
+    background-color: #FFF;
+    margin: auto;
+    padding: 0;
+    width:80%;
+    -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
 
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Full Service Modal */
+
+/* Footer */
 
 #footer {
     background-color: #fff;
@@ -99,3 +133,4 @@ background: url(../images/barrie-marina.jpg);
     margin-bottom: 0px;
 }
 
+/* Footer */

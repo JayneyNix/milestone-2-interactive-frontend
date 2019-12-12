@@ -30,27 +30,56 @@
                     <div id="map"></div>
                 </div>
 
-                <div class="col-sm-12 col-xl-3">
+             <div class="col-sm-12 col-xl-3">
                     <p class="button-text">
-                        Click on the button to show full service marinas only...<br><button class="full-service">Full Service Marinas</button></p>
-                        <div id="services-modal">
-                        <p class="service-info" id="modal-info" onclick="infoPopup()"><i class="far fa-question-circle"></i>What is a full service marina?</p>
+                        Click on the button to view full service marinas only...<br><button class="full-service">Show Full Service Marinas</button></p>
+                        <div class="d-flex justify-content-center">
+                        <button id="services">
+                        <p class="service-question"><i class="far fa-question-circle"></i>What is a full service marina?</p>
+                       </button>
                        </div>
-               <div id="content-box">
-                   <h1 class="info-box-heading">Island Grove Marina</h1>
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Full Service Marinas</h2>
+        </div>
+        <div class="modal-body">
+            <p>One boater's idea of a full service marina might be different to another so for the purpose of this site, we've defined a full service marina as having the following services and facilities;</p>
+            <ul>
+                <li>Offers Gas</li>
+                <li>Has a 'Pump-Out' Service</li>
+                <li>Has a convenience store on-site</li>
+                <li>Marine repairs are available</li>
+                <li>Restaurant / hot food available either on-site or within 10-15 minutes walk</li>
+                <li>Short-term accommodation available either on-site or within walking distance</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+                        <div id="content-box">
+                        </div>
+                    
                 </div>
-            
+
+
+
+
             </div>
-            </div>
-            
-            
+
+
+
             <div class="col-sm-12 intro">
                 <p class="intro-text">
                     Beautiful Lake Simcoe is a popular spot for boaters during the Summer months given it's proximity to Toronto at just over an hours drive. At 30km long, it's also the fourth largest lake in Ontario which can make for some really changeable conditions.
                     If you want to make the most of your day on the lake, it's worthwhile planning a route and checking out the facilities of the local marinas in advance of your trip. We've collated the facilities of the different Lake Simcoe marinas
                     so that you can easily see which ones you might want to use en-route. Happy boating!</p>
             </div>
-            
+
             <div class="comtainer-fluid">
                 <div class="row" id="footer">
                     <div class="col-sm-12 col-md-6-offset-3 justify-content-center">
@@ -65,11 +94,15 @@
         </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwZqbqPK0ZngADMrkDldkW7Q_CUwKy2w0&callback=initMap">
-        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwZqbqPK0ZngADMrkDldkW7Q_CUwKy2w0&callback=initMap">
+        </script> 
+        
+        
         
         <script type="text/javascript" src="assets/js/map.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
