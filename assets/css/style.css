@@ -68,7 +68,10 @@ background: url(../images/barrie-marina.jpg);
     font-size: 18px;
     color: #66b3ff;
     font-weight: bolder;
+    padding: 0;
+    margin: 0;
 }
+
 .far {
     padding-right: 5px;
 }
@@ -83,12 +86,28 @@ background: url(../images/barrie-marina.jpg);
 
 .modal {
     display: none;
-    position: relative;
+      position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
     z-index: 1;
     width: 500px;
     height: 500px;
     overflow: auto;
     background-color: #66b3ff;
+}
+.modal-heading{
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #66b3ff;
+}
+
+.close {
+    color: #66b3ff;
+    font-weight: bolder;
 }
 
 .modal-content {
@@ -96,7 +115,7 @@ background: url(../images/barrie-marina.jpg);
     background-color: #FFF;
     margin: auto;
     padding: 0;
-    width:80%;
+    width:100%;
     -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -111,6 +130,20 @@ background: url(../images/barrie-marina.jpg);
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+
+.btnclose {
+    background-color: #66b3ff;
+    font-family: Lato, sans-serif;
+    color: #fff;
+    font-size:16px;
+    border: 1px solid #66b3ff;
+}
+
+.btnclose:hover {
+    background-color: #fff;
+    color: #66b3ff;
+    
 }
 
 /* Full Service Modal */

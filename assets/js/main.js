@@ -1,6 +1,7 @@
 var modal = document.getElementById("serviceModal");
 var btn = document.getElementById("services");
 var span = document.getElementsByClassName("close")[0];
+var footer = document.getElementsByClassName("btnclose")[0];
 
 btn.onclick = function() {
     modal.style.display = "block";
@@ -15,3 +16,6 @@ window.onclick = function (event) {
     }
 }
 
+footer.onclick = function() {
+    modal.style.display = "none";
+}
