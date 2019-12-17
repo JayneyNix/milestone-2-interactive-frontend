@@ -41,7 +41,7 @@ var marinas = [
     ['Lauderdale Point Marina & Resort Inc', 44.796297, -79.393036, 20],
     ];
     
-    function setMarkers(map) {
+function setMarkers(map) {
         var image = {
             url: 'assets/images/anchor-map-icon.png',
             size: new google.maps.Size(25, 25),
@@ -66,26 +66,24 @@ var marinas = [
             
         });
     }
+    
+infowindow = new google.maps.InfoWindow();
+    
+    for (var i = 0; i < marinas.length; i++) {
+        position = new google.maps.LatLng(marinas[i][1], marinas[i][2]);
+        marker = new google.maps.Marker( {
+            position: position,
+            map: map,
+            title: marinas[i][0]
+            
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infoWindow.setContent("<div>HEllo</div>");
+            infoWindow.open(map, this);
+        });
+    
     }
 
-
-// Popup information window when map marker is clicked
-
-var marker = new google.maps.Marker({
-  center: { lat: 44.302020, lng: -79.472088 },
-  map: map,
-  title: marinas[0]
-});
-
-marker.addListener('click', function() {
-  infowindow.open(map, marker);  
-});
-
-var infowindow = new google.maps.Infowindow({
-    content: contentBox 
+    }
     
-});
-
-var contentBox = 'div id="content-box">';
-
 

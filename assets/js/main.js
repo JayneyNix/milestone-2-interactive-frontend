@@ -19,3 +19,4 @@ window.onclick = function (event) {
 footer.onclick = function() {
     modal.style.display = "none";
 }
+
