@@ -68,12 +68,14 @@ infowindow = new google.maps.InfoWindow();
             
         });
         google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.setContent("<div>HEllo</div>");
+            infoWindow.getElementById("contentBox").innerHTML="<h3>Facilities</h3>";
             infoWindow.open(map, this);
         });
     
     }
 
     }
+    
+    
     
     
