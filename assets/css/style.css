@@ -40,11 +40,13 @@
 }
 
 #services {
-    border-style: groove;
     border-radius: 60%;
     background-color: #fff;
-padding: 40px 40px;
-margin:20px; 
+    padding: 40px 40px;
+    margin: 20px;
+    border-width: 0px;
+    border-style: none;
+    border-image: none;
 }
 
 .button-text {
@@ -52,7 +54,7 @@ margin:20px;
     font-size: 18px;
     color: #fff;
     text-align: center;
-    padding-top:20px;
+    padding-top: 20px;
 }
 
 .full-service {
@@ -63,9 +65,11 @@ margin:20px;
     font-weight: bolder;
     text-align: center;
     margin-top: 10px;
-    border-style: groove;
     border-radius: 60%;
     padding: 40px 40px;
+    border-width: 0px;
+    border-style: none;
+    border-image: none;
 }
 
 .service-question {
@@ -80,6 +84,7 @@ margin:20px;
 
 .far {
     padding-right: 5px;
+    font-weight: bolder;
 }
 
 /* Full Service Modal */
