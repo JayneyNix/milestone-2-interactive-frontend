@@ -36,8 +36,9 @@
 }
 
 #map {
-    min-height: 430px;
+    min-height: 500px;
 }
+
 
 .button-text {
     font-family: Lato, sans-serif;
@@ -72,8 +73,6 @@
 .far {
     padding-right: 5px;
 }
-
-
 
 /* Full Service Modal */
 

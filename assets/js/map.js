@@ -46,7 +46,7 @@ function setMarkers(map) {
             url: 'assets/images/anchor-map-icon.png',
             size: new google.maps.Size(25, 25),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(40, 0)
+            anchor: new google.maps.Point(0, 0)
         };
     
     var shape = {
@@ -54,18 +54,6 @@ function setMarkers(map) {
         type: 'poly'
     };
     
-    for (var i = 0; i < marinas.length; i++) {
-        var boating = marinas[i];
-        var marker = new google.maps.Marker({
-            position: {lat: boating[1], lng: boating[2]},
-            map: map,
-            icon: image,
-            shape: shape,
-            title: marinas[0],
-            zIndex: marinas[3],
-            
-        });
-    }
     
 infowindow = new google.maps.InfoWindow();
     
@@ -74,6 +62,8 @@ infowindow = new google.maps.InfoWindow();
         marker = new google.maps.Marker( {
             position: position,
             map: map,
+            icon: image,
+            shape, shape,
             title: marinas[i][0]
             
         });
@@ -86,4 +76,4 @@ infowindow = new google.maps.InfoWindow();
 
     }
     
-
+    

@@ -20,3 +20,9 @@ footer.onclick = function() {
     modal.style.display = "none";
 }
 
+
+$("services").mouseenter(function() {
+    $(this).removeClass(".service-question").addClass("");
+    
+});
+
