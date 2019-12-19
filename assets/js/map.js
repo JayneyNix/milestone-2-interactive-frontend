@@ -54,7 +54,6 @@ function setMarkers(map) {
         type: 'poly'
     };
     
-    
 infowindow = new google.maps.InfoWindow();
     
     for (var i = 0; i < marinas.length; i++) {
@@ -68,13 +67,14 @@ infowindow = new google.maps.InfoWindow();
             
         });
         google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.getElementById("contentBox").innerHTML="<h3>Facilities</h3>";
-            infoWindow.open(map, this);
+            infowindow.getElementById("contentBox").innerHTML="<h3>Facilities</h3>";
+            infowindow.open(map, this);
         });
     
     }
 
     }
+    
     
     
     
