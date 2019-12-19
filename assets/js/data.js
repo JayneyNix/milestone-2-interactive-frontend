@@ -1,4 +1,4 @@
-var marina = [
+var simcoe = [
   {
     "Marina": "Island Grove",
     "Marina Website": "https://www.islandgrovemarina.com/",
@@ -239,4 +239,4 @@ var marina = [
     "Max. Boat Size": "50ft",
     "Full Service?": "Yes"
   }
-]
+];

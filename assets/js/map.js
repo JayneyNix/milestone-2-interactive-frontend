@@ -10,35 +10,35 @@ function initMap() {
 setMarkers(map);
 }
 var marinas = [
-    ['Island Grove Marina', 44.302020, -79.472088, 1],
-    ['Krates Marina Ltd', 44.225097, -79.465745, 2],
+    ['Island Grove Marina', 44.302020, -79.472088],
+    ['Krates Marina Ltd', 44.225097, -79.465745],
     
-    ['Willow Beach Marina', 44.308918, -79.437413, 3],
-    ['Virginia Beach Marina', 44.327637, -79.287490, 4],
+    ['Willow Beach Marina', 44.308918, -79.437413],
+    ['Virginia Beach Marina', 44.327637, -79.287490],
     
-    ['Cooks Bay Marina', 44.225448, -79.532250, 5],
-    ['Lefroy Harbour Resorts', 44.256730, -79.540350, 6],
+    ['Cooks Bay Marina', 44.225448, -79.532250],
+    ['Lefroy Harbour Resorts', 44.256730, -79.540350],
     
-    ['Friday Harbour Resort', 44.391659, -79.525531, 7],
-    ['Barrie City Marina', 44.385429, -79.690452, 8],
+    ['Friday Harbour Resort', 44.391659, -79.525531],
+    ['Barrie City Marina', 44.385429, -79.690452],
     
-    ['Lake Simcoe Marine', 44.270579, -79.540305, 9],
-    ['Kon Tiki Marine', 44.228860, -79.531020, 10],
+    ['Lake Simcoe Marine', 44.270579, -79.540305],
+    ['Kon Tiki Marine', 44.228860, -79.531020],
     
-    ['Coves of Keswick', 44.227932, -79.458148, 11],
-    ['Keswick Marine Ltd', 44.228393, -79.465250, 12],
+    ['Coves of Keswick', 44.227932, -79.458148],
+    ['Keswick Marine Ltd', 44.228393, -79.465250],
     
-    ['Monto Reno Marina Limited', 44.264661, -79.544191, 13],
-    ['Trent Talbot Marina', 44.477527, -79.153965, 14],
+    ['Monto Reno Marina Limited', 44.264661, -79.544191],
+    ['Trent Talbot Marina', 44.477527, -79.153965],
     
-    ['Marina Del Rey', 44.577239, -79.322960, 15],
-    ['Bridge Port Marina', 44.607499, -79.372620, 16],
+    ['Marina Del Rey', 44.577239, -79.322960],
+    ['Bridge Port Marina', 44.607499, -79.372620],
     
-    ['Blue Beacon Marina', 44.603249, -79.367925, 17],
-    ['Port of Orillia', 44.612924, -79.413152, 18],
+    ['Blue Beacon Marina', 44.603249, -79.367925],
+    ['Port of Orillia', 44.612924, -79.413152],
     
-    ['Mariposa Landing', 44.606715, -79.371680, 19],
-    ['Lauderdale Point Marina & Resort Inc', 44.796297, -79.393036, 20],
+    ['Mariposa Landing', 44.606715, -79.371680],
+    ['Lauderdale Point Marina & Resort Inc', 44.796297, -79.393036],
     ];
     
 function setMarkers(map) {
@@ -62,15 +62,18 @@ infowindow = new google.maps.InfoWindow();
             position: position,
             map: map,
             icon: image,
-            shape, shape,
+            shape: shape,
             title: marinas[i][0]
             
         });
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.getElementById("contentBox").innerHTML="<h3>Facilities</h3>";
-            infowindow.open(map, this);
-        });
-    
+      
+     google.maps.event.addListener(marker, "click", (function(marker) {
+  return function(evt) {
+      var content=marker.getTitle();
+    infowindow.setContent(content);
+    infowindow.open(map, marker);
+  };
+})(marker));
     }
 
     }
