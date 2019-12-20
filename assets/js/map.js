@@ -63,14 +63,17 @@ infowindow = new google.maps.InfoWindow();
             map: map,
             icon: image,
             shape: shape,
-            title: marinas[i][0]
-            
+            title: marinas[i][0],
+           
+            content: "string content here"
         });
       
      google.maps.event.addListener(marker, "click", (function(marker) {
   return function(evt) {
       var content=marker.getTitle();
-    infowindow.setContent(content);
+      var body=("hello");
+      console.log(body);
+    infowindow.setContent(`Title is ${content} and body is ${body}`);
     infowindow.open(map, marker);
   };
 })(marker));
