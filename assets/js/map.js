@@ -64,13 +64,12 @@ infowindow = new google.maps.InfoWindow();
             icon: image,
             shape: shape,
             title: marinas[i][0],
-           
         });
       
      google.maps.event.addListener(marker, "click", (function(marker) {
   return function(evt) {
-      var content=marker.getTitle();
-      var body = marinas[0][3][6];
+      var content = marker.getTitle();
+      var body = marinas[0];
       console.log(body);
       console.log(typeof body);
     infowindow.setContent(`${content} ${body}`);
