@@ -1,7 +1,7 @@
 <Live Site>
 
 
-Alt-Lake Simcoe Marinas - Map
+====== Lake Simcoe Marinas - Map
 ###### For the second milestone project for 'Interactive Frontend Development' I decided to opt for a single-page app relying heavily on one or more API.
 
 
@@ -12,5 +12,7 @@ Alt-Lake Simcoe Marinas - Map
 
 
 Alt-User Stories
-###### * Greg lives in the city and is hoping to go and see the Barrie Dragonboat festival for the first time in August. He'd like to launch his boat on the South end of Lake Simcoe and spend the early part of the day doing some watersports before heading up to Barrie to watch the race. He needs to find somewhere convenient to launch given the size of his boat and find out what it will cost for him to launch and return.
-###### * Jen and Pete live on the South shores of Lake Simcoe and have been invited to spend a few days at a friends' cottage further North in Georgian Bay. They want to make the most of their boat this Summer and so they're planning to travel up there by boat taking in the new scenery and getting some experience of the locks.  
+*Greg lives in the city and is hoping to go and see the Barrie Dragonboat festival for the first time in August. He'd like to launch his boat on the South end of Lake Simcoe and spend the early part of the day doing some watersports before heading up to Barrie to watch the race. He needs to find somewhere convenient to launch given the size of his boat and find out what it will cost for him to launch and return.
+*Jen and Pete live on the South shores of Lake Simcoe and have been invited to spend a few days at a friends' cottage further North in Georgian Bay. They want to make the most of their boat this Summer and so they're planning to travel up there taking in the new scenery and getting some experience of the locks. They need to find out where they can stop en-route to refuel and grab a bite to eat.
+*Darrell is a big fishing enthusiast and has been on day trips to Simcoe before, however, this time he wants to bring a few of his friends and find a marina where he can dock after a day on the lake and has accommodation for them overnight so they can set off early again the next day. 
+

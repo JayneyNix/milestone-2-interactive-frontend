@@ -70,7 +70,7 @@ infowindow = new google.maps.InfoWindow();
      google.maps.event.addListener(marker, "click", (function(marker) {
   return function(evt) {
       var content=marker.getTitle();
-      var body = marinas[0][3];
+      var body = marinas[0][3][6];
       console.log(body);
       console.log(typeof body);
     infowindow.setContent(`${content} ${body}`);
