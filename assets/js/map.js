@@ -10,7 +10,7 @@ function initMap() {
 setMarkers(map);
 }
 var marinas = [
-    ['Island Grove Marina', 44.302020, -79.472088],
+    ['Island Grove Marina', 44.302020, -79.472088, 'https://www.islandgrovemarina.com', 'No', '22ft', 'No'],
     ['Krates Marina Ltd', 44.225097, -79.465745],
     
     ['Willow Beach Marina', 44.308918, -79.437413],
@@ -65,15 +65,15 @@ infowindow = new google.maps.InfoWindow();
             shape: shape,
             title: marinas[i][0],
            
-            content: "string content here"
         });
       
      google.maps.event.addListener(marker, "click", (function(marker) {
   return function(evt) {
       var content=marker.getTitle();
-      var body=("hello");
+      var body = marinas[0][3];
       console.log(body);
-    infowindow.setContent(`Title is ${content} and body is ${body}`);
+      console.log(typeof body);
+    infowindow.setContent(`${content} ${body}`);
     infowindow.open(map, marker);
   };
 })(marker));
