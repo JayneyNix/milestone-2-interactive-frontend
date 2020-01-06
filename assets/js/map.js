@@ -42,7 +42,8 @@ var marinas = [
   ['Lauderdale Point Marina & Resort Inc', 44.796297, -79.393036],
 ];
 
-var simcoe = [{
+var simcoe = [
+  {
     name: "Island Grove",
     marinaWebsite: "https://www.islandgrovemarina.com",
     dayFee: "$25",
@@ -184,7 +185,7 @@ var simcoe = [{
   },
   {
     name: "Marina Del Rey",
-    marina: "https://delreymarina.com",
+    marinaWebsite: "https://delreymarina.com",
     dayFee: "Not available",
     summerPass: "Not available",
     accommodation: false,
@@ -193,57 +194,56 @@ var simcoe = [{
     fullService: false,
   },
   {
-    "Marina": "Bridge Port Marina",
-    "Marina Website": "https://bridgeportmarina.ca/",
-    "Day Launch Fee": "$30",
-    "Summer Season Launch Pass": "$100",
-    "Accommodation Available?": "No",
-    "Restaurant?": "Yes",
-    "Max. Boat Size": "45ft",
-    "Full Service?": "Yes"
+    name: "Bridge Port Marina",
+    marinaWebsite: "https://bridgeportmarina.ca",
+    dayFee: "$30",
+    summerPass: "$100",
+    accommodation: false,
+    restaurant: true,
+    maxBoatSize: "45ft",
+    fullService: true,
   },
   {
-    "Marina": "Blue Beacon Marina",
-    "Marina Website": "https://bluebeaconmarina.com/",
-    "Day Launch Fee": "N/A",
-    "Summer Season Launch Pass": "N/A",
-    "Accommodation Available?": "No",
-    "Restaurant?": "Yes",
-    "Max. Boat Size": "26ft",
-    "Full Service?": "No"
+    name: "Blue Beacon Marina",
+    marinaWebsite: "https://bluebeaconmarina.com",
+    dayFee: "Not available",
+    summerPass: "Not available",
+    accommodation: false,
+    restaurant: true,
+    maxBoatSize: "26ft",
+    fullService: false,
   },
   {
-    "Marina": "Port of Orillia",
-    "Marina Website": "https://www.orillia.com/port-of-orillia",
-    "Day Launch Fee": "FREE",
-    "Summer Season Launch Pass": "N/A",
-    "Accommodation Available?": "Yes",
-    "Restaurant?": "Yes",
-    "Max. Boat Size": "20ft",
-    "Full Service?": "Yes"
+    name: "Port of Orillia",
+    marinaWebsite: "https://www.orillia.com/port-of-orillia",
+    dayFee: "FREE",
+    summerPass: "Not available",
+    accommodation: true,
+    restaurant: true,
+    maxBoatSize: "20ft",
+    fullService: true,
   },
   {
-    "Marina": "Mariposa Landing",
-    "Marina Website": "http://mariposalanding.com/",
-    "Day Launch Fee": "",
-    "Summer Season Launch Pass": "",
-    "Accommodation Available?": "No",
-    "Restaurant?": "",
-    "Max. Boat Size": "",
-    "Full Service?": "Yes"
+    name: "Mariposa Landing",
+    marinaWebsite: "http://mariposalanding.com",
+    dayFee: "Not available",
+    summerPass: "Not available",
+    accommodation: false,
+    restaurant: "false",
+    maxBoatSize: "20ft",
+    fullService: true,
   },
   {
-    "Marina": "Lauderdale Point Marina & Resort Inc",
-    "Marina Website": "https://www.lauderdalepointmarina.com/",
-    "Day Launch Fee": "",
-    "Summer Season Launch Pass": "",
-    "Accommodation Available?": "Yes",
-    "Restaurant?": "No",
-    "Max. Boat Size": "50ft",
-    "Full Service?": "Yes"
+    name: "Lauderdale Point Marina & Resort Inc",
+    marinaWebsite: "https://www.lauderdalepointmarina.com",
+    dayFee: "Not available",
+    summerPass: "Not available",
+    accommodation: true,
+    restaurant: false,
+    maxBoatSize: "50ft",
+    fullService: true,
   }
 ];
-
 
 function setMarkers(map) {
   var image = {
@@ -258,7 +258,7 @@ function setMarkers(map) {
     type: 'poly'
   };
 
-  infowindow = new google.maps.InfoWindow();
+ infowindow = new google.maps.InfoWindow();
 
 
   for (var i = 0; i < marinas.length; i++) {
@@ -274,7 +274,7 @@ function setMarkers(map) {
     google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = ("Website" + simcoe.marinaWebsite);
+        var body = ("Name" + " " + simcoe.name + " " + "Website" + " " + simcoe.marinaWebsite);
         console.log(body);
         console.log(typeof body);
         infowindow.setContent(`${content} ${body}`);
