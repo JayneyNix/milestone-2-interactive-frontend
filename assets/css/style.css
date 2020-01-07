@@ -89,7 +89,8 @@
 
 /* Full Service Modal */
 
-.serviceModal {
+#serviceModal {
+    display: none;
     margin-top: 20px;
 }
 

@@ -242,8 +242,8 @@ var simcoe = [
     restaurant: false,
     maxBoatSize: "50ft",
     fullService: true,
-  }
-];
+  }]
+;
 
 function setMarkers(map) {
   var image = {
@@ -274,7 +274,7 @@ function setMarkers(map) {
     google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = ("Name" + " " + simcoe.name + " " + "Website" + " " + simcoe.marinaWebsite);
+        var body = "Website " + simcoe[0].marinaWebsite;
         console.log(body);
         console.log(typeof body);
         infowindow.setContent(`${content} ${body}`);
