@@ -11,8 +11,8 @@ function initMap() {
 }
 
 var marinas = [
-  ['Island Grove Marina', 44.302020, -79.472088],
-  ['Krates Marina Ltd', 44.225097, -79.465745],
+  ['Island Grove Marina', 44.302020, -79.472088, "https://www.islandgrovemarina.com", "$25"],
+  ['Krates Marina Ltd', 44.225097, -79.465745, "https://www.kratesmarina.com/marina-services", "$20" ],
 
   ['Willow Beach Marina', 44.308918, -79.437413],
   ['Virginia Beach Marina', 44.327637, -79.287490],
@@ -42,208 +42,6 @@ var marinas = [
   ['Lauderdale Point Marina & Resort Inc', 44.796297, -79.393036],
 ];
 
-var simcoe = [
-  {
-    name: "Island Grove",
-    marinaWebsite: "https://www.islandgrovemarina.com",
-    dayFee: "$25",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "22ft",
-    fullService: false,
-  },
-  {
-    name: "Krates Marina Ltd",
-    marinaWebsite: "https://www.kratesmarina.com/marina-services",
-    dayFee: "$20",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "20ft",
-    fullService: false,
-  },
-  {
-    name: "Willow Beach Marina",
-    marinaWebsite: "None",
-    dayFee: "Season Pass Only",
-    summerPass: "$200",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "23ft",
-    fullService: false,
-  },
-  {
-    name: "Virginia Beach Marina",
-    marinaWebsite: "https://virginiabeach-marina.com",
-    dayFee: "$25",
-    summerPass: "Not available",
-    accommodation: false,
-    restuarant: true,
-    maxBoatSize: "33ft",
-    fullService: false,
-  },
-  {
-    name: "Cooks Bay Marina",
-    marinaWebsite: "http://www.cooksbaymarina.com",
-    dayFee: "$35",
-    summerPass: "$260",
-    accommodation: false,
-    restaurant: true,
-    maxBoatSize: "30ft",
-    fullService: false,
-  },
-  {
-    name: "Lefroy Harbour Resorts",
-    marinaWebsite: "http://www.lefroyharbour.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: true,
-    maxBoatSize: "60ft",
-    fullService: true,
-  },
-  {
-    name: "Friday Harbour Resort",
-    marinaWebsite: "https://www.fridayharbour.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: true,
-    restaurant: true,
-    maxBoatSize: "60ft",
-    fullService: true,
-  },
-  {
-    name: "Barrie City Marina",
-    marinaWebsite: "https://www.barrie.ca/Living/ParksTrails/Waterfront/Pages/Marina.aspx",
-    dayFee: "$17.70 + HST",
-    summerPass: "$177",
-    accommodation: true,
-    restaurant: true,
-    maxBoatSize: "60ft",
-    fullService: false,
-  },
-  {
-    name: "Lake Simcoe Marine",
-    marinaWebsite: "https://www.lakesimcoemarine.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "25ft",
-    fullService: false,
-  },
-  {
-    name: "Kon Tiki Marine",
-    marinaWebsite: "http://www.lefroyharbour.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "46ft",
-    fullService: true,
-  },
-  {
-    name: "Coves of Keswick",
-    marinaWebsite: "http://www.lakesimcoemarina.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: false,
-   maxBoatSize: "21ft",
-    fullService: false,
-  },
-  {
-    name: "Keswick Marine Ltd",
-    marinaWebsite: "http://www.keswickmarine.com",
-    dayFee: "Season Pass Only",
-    summerPass: "$225",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "30ft",
-    fullService: true,
-  },
-  {
-    name: "Monto Reno Marina Limited",
-    marinaWebsite: "https://www.montoreno.com",
-    dayFee: "$17 - $45 (based on boat size)",
-    summerPass: "$265 up to 21ft",
-    accommodation: false,
-    restaurant: true,
-    maxBoatSize: "38ft",
-    fullService: false,
-  },
-  {
-    name: "Trent Talbot Marina",
-    marinaWebsite: "http://www.trenttalbotmarina.com",
-    dayFee: "$10",
-    summerPass: "$485",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "45ft",
-    fullService: false,
-  },
-  {
-    name: "Marina Del Rey",
-    marinaWebsite: "https://delreymarina.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: false,
-    maxBoatSize: "",
-    fullService: false,
-  },
-  {
-    name: "Bridge Port Marina",
-    marinaWebsite: "https://bridgeportmarina.ca",
-    dayFee: "$30",
-    summerPass: "$100",
-    accommodation: false,
-    restaurant: true,
-    maxBoatSize: "45ft",
-    fullService: true,
-  },
-  {
-    name: "Blue Beacon Marina",
-    marinaWebsite: "https://bluebeaconmarina.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: true,
-    maxBoatSize: "26ft",
-    fullService: false,
-  },
-  {
-    name: "Port of Orillia",
-    marinaWebsite: "https://www.orillia.com/port-of-orillia",
-    dayFee: "FREE",
-    summerPass: "Not available",
-    accommodation: true,
-    restaurant: true,
-    maxBoatSize: "20ft",
-    fullService: true,
-  },
-  {
-    name: "Mariposa Landing",
-    marinaWebsite: "http://mariposalanding.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: false,
-    restaurant: "false",
-    maxBoatSize: "20ft",
-    fullService: true,
-  },
-  {
-    name: "Lauderdale Point Marina & Resort Inc",
-    marinaWebsite: "https://www.lauderdalepointmarina.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
-    accommodation: true,
-    restaurant: false,
-    maxBoatSize: "50ft",
-    fullService: true,
-  }]
-;
 
 function setMarkers(map) {
   var image = {
@@ -269,16 +67,19 @@ function setMarkers(map) {
       icon: image,
       shape: shape,
       title: marinas[i][0],
+      body: marinas[i][3],
     });
 
     google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = "Website " + simcoe[0].marinaWebsite;
+        var body = "Website " + marker.getBody;
         console.log(body);
         console.log(typeof body);
+        
         infowindow.setContent(`${content} ${body}`);
         infowindow.open(map, marker);
+        
       };
     })(marker));
   }

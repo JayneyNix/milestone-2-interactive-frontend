@@ -39,6 +39,14 @@
     min-height: 500px;
 }
 
+.gm-style-iw .gm-style-iw-c {
+    max-width: 300px;
+}
+
+.gm-style .gm-style-iw {
+    font-size: 16px;
+}
+
 #services {
     border-radius: 60%;
     background-color: #fff;
