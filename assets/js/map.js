@@ -11,8 +11,8 @@ function initMap() {
 }
 
 var marinas = [
-  ['Island Grove Marina', 44.302020, -79.472088, "https://www.islandgrovemarina.com", "$25"],
-  ['Krates Marina Ltd', 44.225097, -79.465745, "https://www.kratesmarina.com/marina-services", "$20" ],
+  ['Island Grove Marina', 44.302020, -79.472088],
+  ['Krates Marina Ltd', 44.225097, -79.465745],
 
   ['Willow Beach Marina', 44.308918, -79.437413],
   ['Virginia Beach Marina', 44.327637, -79.287490],
@@ -67,13 +67,19 @@ function setMarkers(map) {
       icon: image,
       shape: shape,
       title: marinas[i][0],
-      body: marinas[i][3],
     });
+    
+    var result = simcoe.filter (obj => {
+      return obj.name === true;
+    });
+    
+ console.log(result);
+    
 
     google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = "Website " + marker.getBody;
+        var body = result;
         console.log(body);
         console.log(typeof body);
         
@@ -85,3 +91,6 @@ function setMarkers(map) {
   }
 
 }
+
+
+console.log(simcoe);

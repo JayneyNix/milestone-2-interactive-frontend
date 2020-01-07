@@ -1,6 +1,6 @@
 var simcoe = [
   {
-    name: "Island Grove",
+    name: "Island Grove Marina",
     marinaWebsite: "https://www.islandgrovemarina.com",
     dayFee: "$25",
     summerPass: "Not available",
@@ -192,8 +192,8 @@ var simcoe = [
   {
     name: "Lauderdale Point Marina & Resort Inc",
     marinaWebsite: "https://www.lauderdalepointmarina.com",
-    dayFee: "Not available",
-    summerPass: "Not available",
+    dayFee: "$25 including parking",
+    summerPass: "$250",
     accommodation: true,
     restaurant: false,
     maxBoatSize: "50ft",
