@@ -7,6 +7,8 @@ function initMap() {
 
   });
 
+  // Set marker locations
+
   setMarkers(map);
 }
 
@@ -42,6 +44,7 @@ var marinas = [
   ['Lauderdale Point Marina & Resort Inc', 44.796297, -79.393036],
 ];
 
+// Set icons to be used for marker locations
 
 function setMarkers(map) {
   var image = {
@@ -56,41 +59,42 @@ function setMarkers(map) {
     type: 'poly'
   };
 
- infowindow = new google.maps.InfoWindow();
+// Create an infowindow overlay for the map markers
 
+  
 
   for (var i = 0; i < marinas.length; i++) {
-    position = new google.maps.LatLng(marinas[i][1], marinas[i][2]);
-    marker = new google.maps.Marker({
+    var position = new google.maps.LatLng(marinas[i][1], marinas[i][2]);
+    var marker = new google.maps.Marker({
       position: position,
       map: map,
       icon: image,
       shape: shape,
       title: marinas[i][0],
     });
-    
-    var result = simcoe.filter (obj => {
+
+    var result = simcoe.filter(obj => {
       return obj.name === marinas[i][0];
     });
-    
- console.log(result);
-    
+marker.result = result[0];
+    console.log(result);
+var infowindow = new google.maps.InfoWindow();
+
+// Create an event listener which waits for the mouse click and shows an infowindow
 
     google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = result;
+        var body = "Marina Website " + marker.result.marinaWebsite + " " + "Day Fee " + marker.result.dayFee + " " + "Season Pass Price " + marker.result.summerPass + " " + "Accommodation Available? " + marker.result.accommodation + " " + "Restaurant Available? " + marker.result.restaurant + " " + "Max. Boat Size " + marker.result.maxBoatSize + " " + "Is it a Full Service Marina? " + marker.result.fullService;
         console.log(body);
         console.log(typeof body);
-        
-        infowindow.setContent(`${content} ${result[0].marinaWebsite}  ${result[0].dayFee}`);
+
+        infowindow.setContent(`${content} ${body}`);
         infowindow.open(map, marker);
-        
+
       };
     })(marker));
   }
 
 }
-
-
 
