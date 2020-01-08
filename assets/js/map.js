@@ -70,7 +70,7 @@ function setMarkers(map) {
     });
     
     var result = simcoe.filter (obj => {
-      return obj.name === true;
+      return obj.name === marinas[i][0];
     });
     
  console.log(result);
@@ -83,7 +83,7 @@ function setMarkers(map) {
         console.log(body);
         console.log(typeof body);
         
-        infowindow.setContent(`${content} ${body}`);
+        infowindow.setContent(`${content} ${result[0].marinaWebsite}  ${result[0].dayFee}`);
         infowindow.open(map, marker);
         
       };
@@ -93,4 +93,4 @@ function setMarkers(map) {
 }
 
 
-console.log(simcoe);
+
