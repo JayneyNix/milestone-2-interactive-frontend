@@ -31,8 +31,17 @@
                 </div>
 
              <div class="col-sm-12 col-xl-4">
-                    <p class="button-text">
-                        Click on the button to view full service marinas only on the map...<br><button class="fullService">Show Full Service Marinas</button></p>
+                 <div class="d-flex justify-content-center" id="buttons">
+                    <input type="checkbox" name="filter" id="fullService" class="check-btn">
+                    <label for="fs" class="button-text">Show Full Service Marinas Only</label>
+                    
+                    <input type="checkbox" name="filter" id="restaurant" class="check-btn">
+                    <label for="food" class="button-text">Show Marinas With Restaurants</label>
+                    
+                    <input type="checkbox" name="filter" id="stay" class="check-btn">
+                    <label for="accom" class="button-text">Show Marinas With Accommodation</label>
+                    </div>
+                    
                         <div class="d-flex justify-content-center">
                         <button id="services">
                         <p class="service-question"><i class="far fa-question-circle"></i>What is a full service marina?</p>

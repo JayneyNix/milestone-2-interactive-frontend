@@ -85,7 +85,7 @@ var infowindow = new google.maps.InfoWindow();
     google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = "Marina Website " + marker.result.marinaWebsite + " " + "Day Fee " + marker.result.dayFee + " " + "Season Pass Price " + marker.result.summerPass + " " + "Accommodation Available? " + marker.result.accommodation + " " + "Restaurant Available? " + marker.result.restaurant + " " + "Max. Boat Size " + marker.result.maxBoatSize + " " + "Is it a Full Service Marina? " + marker.result.fullService;
+        var body = "<br>" + "Marina Website: " + marker.result.marinaWebsite + "<br>" + "Day Fee: " + marker.result.dayFee + "<br>" + "Season Pass Price: " + marker.result.summerPass + "<br>" + "Accommodation Available? " + marker.result.accommodation + "<br>" + "Restaurant Available? " + marker.result.restaurant + "<br>" + "Max. Boat Size: " + marker.result.maxBoatSize + "<br>" + "Is it a Full Service Marina? " + marker.result.fullService;
         console.log(body);
         console.log(typeof body);
 

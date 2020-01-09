@@ -2,7 +2,7 @@ var modal = document.getElementById("serviceModal");
 var btn = document.getElementById("services");
 var span = document.getElementsByClassName("close")[0];
 var footer = document.getElementsByClassName("btnclose")[0];
-var fsbtn = document.getElementsByClassName("fullService");
+var fsbtn = document.getElementById("fullService");
 
 
 btn.onclick = function() {
@@ -23,10 +23,14 @@ footer.onclick = function() {
 };
 
 
+var filters = {fullService: Yes, restaurant: Yes, dayFee: true};
+
 
 fsbtn.onclick = function() {
+    for (var i =0; i<marinas.length; i++) {
+     marinas[i].setVisible(false);  
+        
+    }
+    
     
 };
-
-
-
