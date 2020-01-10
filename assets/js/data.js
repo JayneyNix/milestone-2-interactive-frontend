@@ -6,7 +6,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "22ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Krates Marina Ltd",
@@ -16,7 +16,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "20ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Willow Beach Marina",
@@ -26,7 +26,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "23ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Virginia Beach Marina",
@@ -36,7 +36,7 @@ var simcoe = [{
     accommodation: "No",
     restuarant: "Yes",
     maxBoatSize: "33ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Cooks Bay Marina",
@@ -46,7 +46,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "Yes",
     maxBoatSize: "30ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Lefroy Harbour Resorts",
@@ -56,7 +56,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "Yes",
     maxBoatSize: "60ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Friday Harbour Resort",
@@ -66,7 +66,7 @@ var simcoe = [{
     accommodation: "Yes",
     restaurant: "Yes",
     maxBoatSize: "60ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Barrie City Marina",
@@ -76,7 +76,7 @@ var simcoe = [{
     accommodation: "Yes",
     restaurant: "Yes",
     maxBoatSize: "60ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Lake Simcoe Marine",
@@ -86,7 +86,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "25ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Kon Tiki Marine",
@@ -96,7 +96,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "46ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Coves of Keswick",
@@ -106,7 +106,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "21ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Keswick Marine Ltd",
@@ -116,7 +116,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "30ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Monto Reno Marina Limited",
@@ -126,7 +126,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "Yes",
     maxBoatSize: "38ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Trent Talbot Marina",
@@ -136,7 +136,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "45ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Marina Del Rey",
@@ -146,7 +146,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "Not Known",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Bridge Port Marina",
@@ -156,7 +156,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "Yes",
     maxBoatSize: "45ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Blue Beacon Marina",
@@ -166,7 +166,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "Yes",
     maxBoatSize: "26ft",
-    fullService: "No",
+    fullService: "No"
   },
   {
     name: "Port of Orillia",
@@ -176,7 +176,7 @@ var simcoe = [{
     accommodation: "Yes",
     restaurant: "Yes",
     maxBoatSize: "20ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Mariposa Landing",
@@ -186,7 +186,7 @@ var simcoe = [{
     accommodation: "No",
     restaurant: "No",
     maxBoatSize: "20ft",
-    fullService: "Yes",
+    fullService: "Yes"
   },
   {
     name: "Lauderdale Point Marina & Resort Inc",
@@ -196,6 +196,6 @@ var simcoe = [{
     accommodation: "Yes",
     restaurant: "No",
     maxBoatSize: "50ft",
-    fullService: "Yes",
+    fullService: "Yes"
   }
 ];

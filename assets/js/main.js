@@ -2,9 +2,9 @@ var modal = document.getElementById("serviceModal");
 var btn = document.getElementById("services");
 var span = document.getElementsByClassName("close")[0];
 var footer = document.getElementsByClassName("btnclose")[0];
-var fsbtn = document.getElementById("fullService");
-var fsbtn = document.getElementById("restaurant");
-var fsbtn = document.getElementById("stay");
+var filterservices = document.getElementById("fullService");
+var filterrestaurant = document.getElementById("restaurant");
+var filteraccommodation = document.getElementById("stay");
 
 
 btn.onclick = function() {
@@ -25,17 +25,19 @@ footer.onclick = function() {
 };
 
 
-var filters = {fullService: Yes, restaurant: Yes, dayFee: true};
+Array.prototype.slice.call( document.querySelectorAll('input[type="checkbox"][id="fullService"]') ).forEach(function(onclick){
+                   onclick.addEventListener('click', function(e){
+                        if( this.value ){
+             clearmarkers();
 
+                            simcoe.forEach( obj=>{
+                                if( obj.fullService==this.value ) markers.push( addmarker.call( this, obj ) );
+                            });
+                        }
+                    });
+                });
+            
 
-fsbtn.onclick = function() {
-    for (var i =0; i<marinas.length; i++) {
-     marinas[i].setVisible(false);  
-        
-    }
-    
-    
-};
 
 
 

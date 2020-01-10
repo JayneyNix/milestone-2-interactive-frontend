@@ -101,4 +101,7 @@ google.maps.event.addListener(map, 'click', function()
  });
 }
     
-  
+  marker.tag = fullService;
+  markers.push(marker);
+
+
