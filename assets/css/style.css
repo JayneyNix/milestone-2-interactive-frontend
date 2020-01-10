@@ -69,9 +69,15 @@
     -ms-box-flex: 0;
     -ms-flex: none;
     flex: none;
-    align-items: center;
-    padding: 5px;
+    color: #fff;
+    height: 20px;
+    width: 20px;
+}
 
+input[type=checkbox] {
+    vertical-align: middle;
+    position: relative;
+   bottom:2px;
 }
 
 .button-text {
@@ -82,8 +88,6 @@
     padding-top: 20px;
     padding-right: 8px;
 }
-
-
 
 .service-question {
     text-align: center;
@@ -143,6 +147,9 @@
     font-weight: bolder;
 }
 
+.btnclose:hover {
+    border-color: #66b3ff !important;
+}
 
 .modal-content {
     position: relative;

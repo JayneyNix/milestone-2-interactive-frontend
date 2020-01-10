@@ -3,6 +3,8 @@ var btn = document.getElementById("services");
 var span = document.getElementsByClassName("close")[0];
 var footer = document.getElementsByClassName("btnclose")[0];
 var fsbtn = document.getElementById("fullService");
+var fsbtn = document.getElementById("restaurant");
+var fsbtn = document.getElementById("stay");
 
 
 btn.onclick = function() {
@@ -34,3 +36,6 @@ fsbtn.onclick = function() {
     
     
 };
+
+
+

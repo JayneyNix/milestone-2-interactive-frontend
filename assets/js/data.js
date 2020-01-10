@@ -137,7 +137,7 @@ var simcoe = [{
     restaurant: "No",
     maxBoatSize: "45ft",
     fullService: "No",
-  },dayf
+  },
   {
     name: "Marina Del Rey",
     marinaWebsite: "https://delreymarina.com",

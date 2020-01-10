@@ -82,7 +82,7 @@ var infowindow = new google.maps.InfoWindow();
 
 // Create an event listener which waits for the mouse click and shows an infowindow
 
-    google.maps.event.addListener(marker, "click", (function(marker) {
+   google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
         var body = "<br>" + "Marina Website: " + marker.result.marinaWebsite + "<br>" + "Day Fee: " + marker.result.dayFee + "<br>" + "Season Pass Price: " + marker.result.summerPass + "<br>" + "Accommodation Available? " + marker.result.accommodation + "<br>" + "Restaurant Available? " + marker.result.restaurant + "<br>" + "Max. Boat Size: " + marker.result.maxBoatSize + "<br>" + "Is it a Full Service Marina? " + marker.result.fullService;
@@ -95,6 +95,10 @@ var infowindow = new google.maps.InfoWindow();
       };
     })(marker));
   }
-
+google.maps.event.addListener(map, 'click', function()
+    {
+  infowindow.close();
+ });
 }
-
+    
+  
