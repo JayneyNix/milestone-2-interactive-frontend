@@ -99,9 +99,23 @@ google.maps.event.addListener(map, 'click', function()
     {
   infowindow.close();
  });
+ 
+ 
+ var filterservices = document.getElementById("fullMarinas");
+console.log(filterservices);
+var filterrestaurant = document.getElementById("restaurant");
+var filteraccommodation = document.getElementById("stay");
+
+
+filterservices.addEventListener("click", filter);
+    function filter() {
+        if ($("#fullMarinas").is(":checked")) {
+            fsResult = simcoe.filter(fullService == "Yes");
+        } else {
+            return marker;
+        }
+    }
+ 
+ 
 }
     
-  marker.tag = fullService;
-  markers.push(marker);
-
-

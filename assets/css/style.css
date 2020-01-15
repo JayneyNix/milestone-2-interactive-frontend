@@ -77,7 +77,7 @@
 input[type=checkbox] {
     vertical-align: middle;
     position: relative;
-   bottom:2px;
+    bottom: 2px;
 }
 
 .button-text {
