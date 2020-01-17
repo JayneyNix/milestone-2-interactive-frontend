@@ -107,7 +107,7 @@ google.maps.event.addListener(map, 'click', function()
 
 
 
-
+var marker = [];
 document.getElementById("filterFullService").addEventListener("click", filterFullService);
 
 function clearMarkers() {
