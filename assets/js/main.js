@@ -23,10 +23,6 @@ footer.onclick = function() {
 };
 
 
-var filterservices = document.getElementById("fullMarinas");
-console.log(filterservices)
-var filterrestaurant = document.getElementById("restaurant");
-var filteraccommodation = document.getElementById("stay");
 
 
 

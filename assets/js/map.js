@@ -10,6 +10,7 @@ function initMap() {
   // Set marker locations
 
   setMarkers(map);
+  
 }
 
 var marinas = [
@@ -92,10 +93,43 @@ var infowindow = new google.maps.InfoWindow();
         infowindow.open(map, marker);
 
       };
+      
     })(marker));
+    
   }
+  
+  
 google.maps.event.addListener(map, 'click', function()
     {
   infowindow.close();
  });
 }
+
+
+
+
+document.getElementById("filterFullService").addEventListener("click", filterFullService);
+
+function clearMarkers() {
+  
+  while (marker.length > 0) {
+    marker.pop().setMap(null);
+  }
+}
+
+
+
+function addFullServiceMarkers() {
+  if (simcoe.fullService=="Yes")  
+  marker.addTo(map);
+}
+
+function filterFullService() {
+  if (this.value) {
+    clearMarkers();
+  }
+  else {
+    addFullServiceMarkers();
+  }
+}
+  
