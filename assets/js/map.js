@@ -59,10 +59,9 @@ function setMarkers(map) {
     type: 'poly'
   };
 
-  // Create an infowindow overlay for the map markers
+// Create an infowindow overlay for the map markers
 
-
-
+  
   for (var i = 0; i < marinas.length; i++) {
     var position = new google.maps.LatLng(marinas[i][1], marinas[i][2]);
     var marker = new google.maps.Marker({
@@ -76,22 +75,16 @@ function setMarkers(map) {
     var result = simcoe.filter(obj => {
       return obj.name === marinas[i][0];
     });
-    marker.result = result[0];
+marker.result = result[0];
     console.log(result);
-    var infowindow = new google.maps.InfoWindow();
+var infowindow = new google.maps.InfoWindow();
 
-    // Create an event listener which waits for the mouse click and shows an infowindow
+// Create an event listener which waits for the mouse click and shows an infowindow
 
-    google.maps.event.addListener(marker, "click", (function(marker) {
+   google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
-        var body = "<br>" + "Marina Website: " + marker.result.marinaWebsite + "<br>" + 
-        "Day Fee: " + marker.result.dayFee + "<br>" + 
-        "Season Pass Price: " + marker.result.summerPass + "<br>" + 
-        "Accommodation Available? " + marker.result.accommodation + "<br>" + 
-        "Restaurant Available? " + marker.result.restaurant + "<br>" + 
-        "Max. Boat Size: " + marker.result.maxBoatSize + "<br>" + 
-        "Is it a Full Service Marina? " + marker.result.fullService;
+        var body = "<br>" + "Marina Website: " + marker.result.marinaWebsite + "<br>" + "Day Fee: " + marker.result.dayFee + "<br>" + "Season Pass Price: " + marker.result.summerPass + "<br>" + "Accommodation Available? " + marker.result.accommodation + "<br>" + "Restaurant Available? " + marker.result.restaurant + "<br>" + "Max. Boat Size: " + marker.result.maxBoatSize + "<br>" + "Is it a Full Service Marina? " + marker.result.fullService;
         console.log(body);
         console.log(typeof body);
 
@@ -100,33 +93,9 @@ function setMarkers(map) {
 
       };
     })(marker));
-
   }
-  google.maps.event.addListener(map, 'click', function() {
-    infowindow.close();
-  });
+google.maps.event.addListener(map, 'click', function()
+    {
+  infowindow.close();
+ });
 }
-
-let markers = [];
-const addmarker = marker;
-
-const clearmarkers=function(){
-  markers.forEach(marker=>{
-    marker.setMap(null);
-  });
-};
-
-
-Array.prototype.slice.call(
-  document.querySelectorAll('input[type="checkbox"]')).forEach(function(input){
-    input.addEventListener('click', function(e){
-      if(this.value){
-        clearmarkers();
-        
-        simcoe.forEach(obj=>{
-          if(obj.fullService=="Yes")marker.push(addmarker.call(this, obj));
-        });
-      }
-    });
-  });
-
