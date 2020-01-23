@@ -124,7 +124,7 @@ function clearMarkers() {
 
 function addFullServiceMarkers() {
   if (simcoe.fullService == "Yes")
-    marker.addTo(map);
+    setMarkers(map);
 }
 
 function filterFullService() {
@@ -133,7 +133,7 @@ function filterFullService() {
     clearMarkers();
   }
   else {
-    setMarkers();
+    setMarkers(map);
   }
 }
 
@@ -141,15 +141,21 @@ function filterFullService() {
 document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
 
 function filterRestaurant() {
-  if (this.value) {
+  if (this.checked) {
     clearMarkers();
+  }
+  else {
+    setMarkers(map)
   }
 }
 
 document.getElementById("filterStay").addEventListener("click", filterStay);
 
 function filterStay() {
-  if (this.value) {
+  if (this.checked) {
     clearMarkers();
+  }
+  else {
+    setMarkers(map);
   }
 }
