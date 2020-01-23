@@ -1,7 +1,8 @@
 // Initialize map and set marker locations and icon
 
+
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     zoom: 9,
     center: { lat: 44.434546, lng: -79.350972 }
 
@@ -10,7 +11,7 @@ function initMap() {
   // Set marker locations
 
   setMarkers(map);
-  
+
 }
 
 var marinas = [
@@ -60,9 +61,9 @@ function setMarkers(map) {
     type: 'poly'
   };
 
-// Create an infowindow overlay for the map markers
+  // Create an infowindow overlay for the map markers
 
-  
+
   for (var i = 0; i < marinas.length; i++) {
     var position = new google.maps.LatLng(marinas[i][1], marinas[i][2]);
     var marker = new google.maps.Marker({
@@ -76,17 +77,17 @@ function setMarkers(map) {
     var result = simcoe.filter(obj => {
       return obj.name === marinas[i][0];
     });
-marker.result = result[0];
+    marker.result = result[0];
     console.log(result);
-var infowindow = new google.maps.InfoWindow();
+    var infowindow = new google.maps.InfoWindow();
 
-// Create an event listener which waits for the mouse click and shows an infowindow
-
-
-markers.push(marker);
+    // Create an event listener which waits for the mouse click and shows an infowindow
 
 
-   google.maps.event.addListener(marker, "click", (function(marker) {
+    markers.push(marker);
+
+
+    google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
         var body = "<br>" + "Marina Website: " + marker.result.marinaWebsite + "<br>" + "Day Fee: " + marker.result.dayFee + "<br>" + "Season Pass Price: " + marker.result.summerPass + "<br>" + "Accommodation Available? " + marker.result.accommodation + "<br>" + "Restaurant Available? " + marker.result.restaurant + "<br>" + "Max. Boat Size: " + marker.result.maxBoatSize + "<br>" + "Is it a Full Service Marina? " + marker.result.fullService;
@@ -97,24 +98,23 @@ markers.push(marker);
         infowindow.open(map, marker);
 
       };
-      
+
     })(marker));
-    
+
   }
-  
 
 
-google.maps.event.addListener(map, 'click', function()
-    {
-  infowindow.close();
- });
+
+  google.maps.event.addListener(map, 'click', function() {
+    infowindow.close();
+  });
 }
-
-var markers=[];
+var map;
+var markers = [];
 document.getElementById("filterFullService").addEventListener("click", filterFullService);
 
 function clearMarkers() {
-  
+
   while (markers.length > 0) {
     markers.pop().setMap(null);
   }
@@ -123,28 +123,33 @@ function clearMarkers() {
 
 
 function addFullServiceMarkers() {
-  if (simcoe.fullService=="Yes")  
-  marker.addTo(map);
+  if (simcoe.fullService == "Yes")
+    marker.addTo(map);
 }
 
 function filterFullService() {
-  if (this.value) {
+  if (this.checked) {
+    console.log('something');
     clearMarkers();
   }
   else {
-    addFullServiceMarkers();
+    setMarkers();
   }
 }
-  
+
 
 document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
+
 function filterRestaurant() {
   if (this.value) {
     clearMarkers();
-  }}
-  
-  document.getElementById("filterStay").addEventListener("click", filterStay);
+  }
+}
+
+document.getElementById("filterStay").addEventListener("click", filterStay);
+
 function filterStay() {
   if (this.value) {
     clearMarkers();
-  }}
+  }
+}
