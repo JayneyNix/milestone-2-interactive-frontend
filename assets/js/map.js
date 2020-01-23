@@ -82,6 +82,10 @@ var infowindow = new google.maps.InfoWindow();
 
 // Create an event listener which waits for the mouse click and shows an infowindow
 
+
+markers.push(marker);
+
+
    google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
@@ -98,22 +102,21 @@ var infowindow = new google.maps.InfoWindow();
     
   }
   
-  
+
+
 google.maps.event.addListener(map, 'click', function()
     {
   infowindow.close();
  });
 }
 
-
-
-var marker = [];
+var markers=[];
 document.getElementById("filterFullService").addEventListener("click", filterFullService);
 
 function clearMarkers() {
   
-  while (marker.length > 0) {
-    marker.pop().setMap(null);
+  while (markers.length > 0) {
+    markers.pop().setMap(null);
   }
 }
 
@@ -133,3 +136,15 @@ function filterFullService() {
   }
 }
   
+
+document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
+function filterRestaurant() {
+  if (this.value) {
+    clearMarkers();
+  }}
+  
+  document.getElementById("filterStay").addEventListener("click", filterStay);
+function filterStay() {
+  if (this.value) {
+    clearMarkers();
+  }}
