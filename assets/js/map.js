@@ -121,22 +121,16 @@ function clearMarkers() {
 }
 
 
-
-function addFullServiceMarkers() {
-  if (simcoe.fullService == "Yes")
-    setMarkers(map);
-}
-
 function filterFullService() {
   if (this.checked) {
     console.log('something');
     clearMarkers();
+
   }
   else {
     setMarkers(map);
   }
 }
-
 
 document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
 
