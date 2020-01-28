@@ -109,6 +109,8 @@ function setMarkers(map) {
     infowindow.close();
   });
 }
+
+
 var map;
 var markers = [];
 document.getElementById("filterFullService").addEventListener("click", filterFullService);
@@ -121,16 +123,31 @@ function clearMarkers() {
 }
 
 
+var filteredLocations = [];
+for (var i = 0; i < simcoe.length; i++) {
+   if (simcoe.fullService = "Yes") {
+      filteredLocations.push(markers)
+      
+    }
+    
+  }
+setMarkers(map);
+
+console.log(filteredLocations);
+
 function filterFullService() {
   if (this.checked) {
     console.log('something');
     clearMarkers();
-
-  }
-  else {
+if (this.checked)  {
     setMarkers(map);
   }
+  else {
+    setMarkers(null);
 }
+  }
+}
+
 
 document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
 
