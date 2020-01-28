@@ -9,8 +9,7 @@ function initMap() {
   });
 
   // Set marker locations
-
-  setMarkers(map);
+setMarkers(map);
 
 }
 
@@ -110,7 +109,6 @@ function setMarkers(map) {
   });
 }
 
-
 var map;
 var markers = [];
 document.getElementById("filterFullService").addEventListener("click", filterFullService);
@@ -122,31 +120,26 @@ function clearMarkers() {
   }
 }
 
-
 var filteredLocations = [];
-for (var i = 0; i < simcoe.length; i++) {
-   if (simcoe.fullService = "Yes") {
-      filteredLocations.push(markers)
-      
-    }
-    
-  }
-setMarkers(map);
+for (var i = 0; i < marinas.length; i++) {
+   if (simcoe.fullService = 'Yes' ){
+    filteredLocations.push(markers);
+   }
+}
+   
+
 
 console.log(filteredLocations);
 
+
 function filterFullService() {
-  if (this.checked) {
-    console.log('something');
-    clearMarkers();
-if (this.checked)  {
-    setMarkers(map);
-  }
-  else {
-    setMarkers(null);
+if (this.checked) {
+console.log('something');
+clearMarkers();
+setMarkers(map).apply(null, filteredLocations);
 }
+
   }
-}
 
 
 document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
