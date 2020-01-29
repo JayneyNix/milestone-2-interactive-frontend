@@ -1,5 +1,9 @@
 // Initialize map and set marker locations and icon
 
+var markers = [];
+var map;
+var marinasToDisplay = [];
+var fieldsToCheck = [];
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -9,7 +13,7 @@ function initMap() {
   });
 
   // Set marker locations
-setMarkers(map);
+setMarkers(map, fieldsToCheck);
 
 }
 
@@ -47,7 +51,8 @@ var marinas = [
 
 // Set icons to be used for marker locations
 
-function setMarkers(map) {
+function setMarkers(map, fields) {
+    marinasToDisplay = [];
   var image = {
     url: 'assets/images/anchor-map-icon.png',
     size: new google.maps.Size(25, 25),
@@ -62,9 +67,22 @@ function setMarkers(map) {
 
   // Create an infowindow overlay for the map markers
 
+for (let field of fields) {
+    for(let item of simcoe){
+        if(item[field] == "Yes"){
+            for(let m of marinas){
+                if(m[0] == item.name){
+                    marinasToDisplay.push(m)
+                }
+            }
+        }
+    }
+}
 
-  for (var i = 0; i < marinas.length; i++) {
-    var position = new google.maps.LatLng(marinas[i][1], marinas[i][2]);
+
+
+  for (var i = 0; i < marinasToDisplay.length; i++) {
+    var position = new google.maps.LatLng(marinasToDisplay[i][1], marinasToDisplay[i][2]);
     var marker = new google.maps.Marker({
       position: position,
       map: map,
@@ -109,57 +127,28 @@ function setMarkers(map) {
   });
 }
 
-var map;
-var markers = [];
-document.getElementById("filterFullService").addEventListener("click", filterFullService);
+document.getElementById("fullService").addEventListener("click", fullService);
+let inputs = document.querySelectorAll('input')
+console.log(inputs);
+inputs.forEach(function(input){
+    input.addEventListener('click', filter)
+})
 
 function clearMarkers() {
-
+ 
   while (markers.length > 0) {
     markers.pop().setMap(null);
   }
 }
 
-var filteredLocations = [];
-for (var i = 0; i < marinas.length; i++) {
-   if (simcoe.fullService = 'Yes' ){
-    filteredLocations.push(markers);
-   }
-}
-   
-
-
-console.log(filteredLocations);
-
-
-function filterFullService() {
-if (this.checked) {
-console.log('something');
-clearMarkers();
-setMarkers(map).apply(null, filteredLocations);
-}
-
-  }
-
-
-document.getElementById("filterRestaurant").addEventListener("click", filterRestaurant);
-
-function filterRestaurant() {
-  if (this.checked) {
-    clearMarkers();
-  }
-  else {
-    setMarkers(map)
-  }
-}
-
-document.getElementById("filterStay").addEventListener("click", filterStay);
-
-function filterStay() {
-  if (this.checked) {
-    clearMarkers();
-  }
-  else {
-    setMarkers(map);
-  }
-}
+function filter() {
+    clearMarkers()
+    if (this.checked) {
+        fieldsToCheck.push(this.id)
+        setMarkers(map, fieldsToCheck);
+    }
+    else {
+        fieldsToCheck.splice(fieldsToCheck.indexOf(this.id))
+        setMarkers(map, fieldsToCheck);
+    }
+    }
