@@ -88,11 +88,11 @@ for (let field of fields) {
       map: map,
       icon: image,
       shape: shape,
-      title: marinas[i][0],
+      title: marinasToDisplay[i][0],
     });
 
     var result = simcoe.filter(obj => {
-      return obj.name === marinas[i][0];
+      return obj.name === marinasToDisplay[i][0];
     });
     marker.result = result[0];
     console.log(result);
@@ -148,7 +148,7 @@ function filter() {
         setMarkers(map, fieldsToCheck);
     }
     else {
-        fieldsToCheck.splice(fieldsToCheck.indexOf(this.id))
+        fieldsToCheck.splice(fieldsToCheck.indexOf(this.id),1)
         setMarkers(map, fieldsToCheck);
     }
     }
