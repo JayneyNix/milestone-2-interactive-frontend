@@ -1,20 +1,19 @@
 // Initialize map and set marker locations and icon
-
 var markers = [];
 var map;
 var marinasToDisplay = [];
 var fieldsToCheck = [];
-
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
     zoom: 9,
     center: { lat: 44.434546, lng: -79.350972 }
 
   });
 
   // Set marker locations
-setMarkers(map, fieldsToCheck);
 
+  setMarkers(map, fieldsToCheck);
+  
 }
 
 var marinas = [
@@ -52,7 +51,7 @@ var marinas = [
 // Set icons to be used for marker locations
 
 function setMarkers(map, fields) {
-    marinasToDisplay = [];
+   marinasToDisplay = [];
   var image = {
     url: 'assets/images/anchor-map-icon.png',
     size: new google.maps.Size(25, 25),
@@ -65,9 +64,8 @@ function setMarkers(map, fields) {
     type: 'poly'
   };
 
-  // Create an infowindow overlay for the map markers
-
-for (let field of fields) {
+// Create an infowindow overlay for the map markers
+for(let field of fields){
     for(let item of simcoe){
         if(item[field] == "Yes"){
             for(let m of marinas){
@@ -78,9 +76,9 @@ for (let field of fields) {
         }
     }
 }
+  
 
-
-
+  
   for (var i = 0; i < marinasToDisplay.length; i++) {
     var position = new google.maps.LatLng(marinasToDisplay[i][1], marinasToDisplay[i][2]);
     var marker = new google.maps.Marker({
@@ -94,17 +92,13 @@ for (let field of fields) {
     var result = simcoe.filter(obj => {
       return obj.name === marinasToDisplay[i][0];
     });
-    marker.result = result[0];
-    console.log(result);
-    var infowindow = new google.maps.InfoWindow();
+marker.result = result[0];
 
-    // Create an event listener which waits for the mouse click and shows an infowindow
+var infowindow = new google.maps.InfoWindow();
 
-
-    markers.push(marker);
-
-
-    google.maps.event.addListener(marker, "click", (function(marker) {
+// Create an event listener which waits for the mouse click and shows an infowindow
+markers.push(marker)
+   google.maps.event.addListener(marker, "click", (function(marker) {
       return function(evt) {
         var content = marker.getTitle();
         var body = "<br>" + "Marina Website: " + marker.result.marinaWebsite + "<br>" + "Day Fee: " + marker.result.dayFee + "<br>" + "Season Pass Price: " + marker.result.summerPass + "<br>" + "Accommodation Available? " + marker.result.accommodation + "<br>" + "Restaurant Available? " + marker.result.restaurant + "<br>" + "Max. Boat Size: " + marker.result.maxBoatSize + "<br>" + "Is it a Full Service Marina? " + marker.result.fullService;
@@ -115,40 +109,53 @@ for (let field of fields) {
         infowindow.open(map, marker);
 
       };
-
+      
     })(marker));
-
   }
-
-
-
-  google.maps.event.addListener(map, 'click', function() {
-    infowindow.close();
-  });
+  
+  
+google.maps.event.addListener(map, 'click', function()
+    {
+  infowindow.close();
+ });
 }
 
-document.getElementById("fullService").addEventListener("click", fullService);
+
+
+
+// document.getElementById("filterFullService").addEventListener("click", filterFullService);
 let inputs = document.querySelectorAll('input')
-console.log(inputs);
+console.log(inputs)
 inputs.forEach(function(input){
     input.addEventListener('click', filter)
 })
 
 function clearMarkers() {
- 
+  
   while (markers.length > 0) {
     markers.pop().setMap(null);
   }
 }
 
+
+
+function addFullServiceMarkers() {
+  if (simcoe.fullService=="Yes")  
+  marker.addTo(map);
+}
+
 function filter() {
     clearMarkers()
-    if (this.checked) {
-        fieldsToCheck.push(this.id)
-        setMarkers(map, fieldsToCheck);
-    }
-    else {
-        fieldsToCheck.splice(fieldsToCheck.indexOf(this.id),1)
-        setMarkers(map, fieldsToCheck);
-    }
-    }
+  if (this.checked) {
+    fieldsToCheck.push(this.id)
+    console.log(fieldsToCheck)
+    setMarkers(map, fieldsToCheck);
+    
+  }
+  else {
+      fieldsToCheck.splice(fieldsToCheck.indexOf(this.id),1)
+      console.log(fieldsToCheck)
+    setMarkers(map, fieldsToCheck);
+  }
+}
+  
