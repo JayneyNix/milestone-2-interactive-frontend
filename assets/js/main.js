@@ -22,7 +22,11 @@ footer.onclick = function() {
     modal.style.display = "none";
 };
 
-
+var select = $(document).getElementById('#marinaSelect')
+var option = select.children('#dropdown')
+option.css ('font-family', 'Lato')
+option.css ('font-size', '18px')
+option.css ('color', '#fff')
 
 
 

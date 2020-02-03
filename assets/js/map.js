@@ -158,4 +158,13 @@ function filter() {
     setMarkers(map, fieldsToCheck);
   }
 }
+
+var select = document.getElementById("marinaSelect");
+for (var i = 0; i < marinas.length; ++i) {
+    select[select.length] = new Option(marinas[i][0], marinas[i][0]);
+}
+
+
+
+addFullServiceMarkers();
   

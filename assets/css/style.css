@@ -62,6 +62,11 @@
     padding-top: 20px;
 }
 
+#marinaSelect {
+    vertical-align: middle;
+    position: relative;
+}
+
 .check-btn {
     -webkit-box-flex: 0;
     -webkit-flex: none;
